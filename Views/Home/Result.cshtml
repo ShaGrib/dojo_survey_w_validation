@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@using dojo_survey_w_validation.Models;
+@model Ninja;
+
+<div class="text-center border border-dark border-3 p-5 m-5">
+    <form action="survey" method="post">
+        <div class="d-flex justify-content-between mb-2">
+            <label asp-for="Name">
+                <h4>Your Name: </h4>
+            </label>
+            <h4>@Model.Name</h4>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+            <label asp-for="Location">
+                <h4>Dojo Location: </h4>
+            </label>
+            <h4>@Model.Location</h4>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+            <label asp-for="FavoriteLanguage">
+                <h4>Dojo Location: </h4>
+            </label>
+            <h4>@Model.FavoriteLanguage</h4>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+            <label asp-for="Comment">
+                <h4>Comment (optional): </h4>
+            </label>
+        </div>
+        <h4>@Model.Comment</h4>
+    </form>
+</div>
